@@ -1,0 +1,28 @@
+{% extends 'theam.html'%}
+<!-- this is extensing Theam.HTML -->
+
+
+{% block content %}
+
+<h2> products </h2>
+
+{% for product in products %}
+
+<div class="container">
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{ product.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">name : {{ product.name }}</h5>
+          <p class="card-text"> Rs : {{ product.price }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
+
